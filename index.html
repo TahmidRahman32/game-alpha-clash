@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Alpha Clash</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://kit.fontawesome.com/9842331c01.js" crossorigin="anonymous"></script>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     clifford: "#da373d",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-[#1E1E1E] h-screen">
+      <main class="bg-[url('./images/background.png')] bg-center max-w-xl mx-auto h-screen flex justify-center items-center">
+         <div id="home-page" class="">
+            <section class="home text-center">
+               <h1 class="text-8xl font-bold text-white mb-5 font-poppins">ALPHABET_CLASH</h1>
+               <p class="font-bold text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+               <button id="home-page-btn" onclick="play()" class="btn bg-white text-black mt-3">Play Now</button>
+            </section>
+         </div>
+         <section id="play-ground" class="space-y-4 hidden">
+            <div>
+               <div class="artboard artboard-horizontal phone-4 border-[20px] rounded border-[#1E1E1ECC] bg-[#ffffffB3] relative">
+                  <p class="bg-[#2F2941] w-1/2 mx-auto text-center py-3 rounded-b-lg absolute -top-5 left-48 hover:underline text-white">Don't watch keyboard while playing...</p>
+                  <h1 id="alphabet" class="text-black flex justify-center items-center h-full text-6xl font-bold uppercase">Y</h1>
+               </div>
+            </div>
+            <div>
+               <div class="flex justify-center gap-1 my-1 w-full">
+                  <kbd id="q" class="kbd">q</kbd>
+                  <kbd id="w" class="kbd">w</kbd>
+                  <kbd id="e" class="kbd">e</kbd>
+                  <kbd id="r" class="kbd">r</kbd>
+                  <kbd id="t" class="kbd">t</kbd>
+                  <kbd id="y" class="kbd">y</kbd>
+                  <kbd id="u" class="kbd">u</kbd>
+                  <kbd id="i" class="kbd">i</kbd>
+                  <kbd id="o" class="kbd">o</kbd>
+                  <kbd id="p" class="kbd">p</kbd>
+               </div>
+               <div class="flex justify-center gap-1 my-1 w-full">
+                  <kbd id="a" class="kbd">a</kbd>
+                  <kbd id="s" class="kbd">s</kbd>
+                  <kbd id="d" class="kbd">d</kbd>
+                  <kbd id="f" class="kbd">f</kbd>
+                  <kbd id="g" class="kbd">g</kbd>
+                  <kbd id="h" class="kbd">h</kbd>
+                  <kbd id="j" class="kbd">j</kbd>
+                  <kbd id="k" class="kbd">k</kbd>
+                  <kbd id="l" class="kbd">l</kbd>
+               </div>
+               <div class="flex justify-center gap-1 my-1 w-full">
+                  <kbd id="z" class="kbd">z</kbd>
+                  <kbd id="x" class="kbd">x</kbd>
+                  <kbd id="c" class="kbd">c</kbd>
+                  <kbd id="v" class="kbd">v</kbd>
+                  <kbd id="b" class="kbd">b</kbd>
+                  <kbd id="n" class="kbd">n</kbd>
+                  <kbd id="m" class="kbd">m</kbd>
+                  <kbd id="/" class="kbd">/</kbd>
+               </div>
+            </div>
+            <div class="flex justify-between">
+               <div>
+                  <button class="bg-[#894189] py-1 px-6 rounded-2xl text-white">life <i class="fa-solid fa-heart text-red-600"></i><span id="life">3</span></button>
+               </div>
+               <div>
+                  <button class="bg-[#360490] py-1 px-6 rounded-2xl text-white">Score <i class="fa-solid fa-sack-dollar"> </i> <span id="current-score">0</span></button>
+               </div>
+            </div>
+         </section>
+         <div class="hidden">
+            <section class="score text-center bg-gradient-to-r from-[#FFFFFF5E] to-[#2F294133] rounded-lg py-3 px-5">
+               <h1 class="text-5xl font-bold text-white mb-5 font-poppins">Score : 14</h1>
+               <button class="btn bg-white text-black mt-3 border-0">Play A</button>
+               <p class="font-bold text-white mt-3">Practice will make you Pro</p>
+            </section>
+         </div>
+      </main>
+      <script src="js/utiliti.js"></script>
+      <script src="js/hidden.js"></script>
+   </body>
+</html>
